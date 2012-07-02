@@ -46,15 +46,34 @@
 			<queue base="0x210"/>
 		</entry>
 		<entry>
-			<data>0x0200c0a8a1fe</data>
+			<data>0x0200C0A8A1FE</data>
 			<queue base="0x220"/>
 		</entry>
 		<action condition="on-miss" type="distribution" name="garbage_dist"/>
 	</classification>
 
+	<classification name="arp_clsf">
+		<key>
+			<fieldref name="arp.p_dst"/>
+		</key>
+		<entry>
+			<data>0xC0A80162</data>
+			<mask>0xFFFFFFFF</mask>
+			<queue base="0x220"/>
+		</entry>
+	</classification>
+
 	<distribution name="eth_dist">
 		<queue count="1" base="0x230"/>
 		<action type="classification" name="eth_dest_clsf"/>
+	</distribution>
+
+	<distribution name="arp_dist">
+		<queue count="1" base="0x230"/>
+		 <protocols>
+                <protocolref name="arp"/>
+        </protocols>
+		<action type="classification" name="arp_clsf"/>
 	</distribution>
 
 	<distribution name="garbage_dist">
@@ -63,6 +82,7 @@
 
 	<policy name="shared_mac_policy">
 		<dist_order>
+			<distributionref name="arp_dist"/>
 			<distributionref name="eth_dist"/>
 		</dist_order>
 	</policy>
