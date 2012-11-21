@@ -66,7 +66,7 @@
 	</distribution>
 	
 	<distribution name="ipv4eth4">
-        <queue count="128" base="0x3c00"/>
+        <queue count="128" base="0x3a00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -75,7 +75,7 @@
 	</distribution>
 	
 	<distribution name="ipv4eth5">
-        <queue count="128" base="0x7800"/>
+        <queue count="128" base="0x3a80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -84,7 +84,7 @@
 	</distribution>
 	
 	<distribution name="ipv4eth6">
-        <queue count="128" base="0x7880"/>
+        <queue count="128" base="0x3c00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -93,6 +93,33 @@
 	</distribution>
 	
 	<distribution name="ipv4eth7">
+        <queue count="128" base="0x3c80"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.tos"/>
+	</key>
+	</distribution>
+
+	<distribution name="ipv4eth8">
+        <queue count="128" base="0x7800"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.tos"/>
+	</key>
+	</distribution>
+
+	<distribution name="ipv4eth9">
+        <queue count="128" base="0x7880"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.tos"/>
+	</key>
+	</distribution>
+
+	<distribution name="ipv4eth10">
         <queue count="128" base="0x7900"/>
         <key>
 		    <fieldref name="ipv4.src"/>
@@ -100,8 +127,8 @@
 		    <fieldref name="ipv4.tos"/>
 	</key>
 	</distribution>
-	
-	<distribution name="ipv4eth8">
+
+	<distribution name="ipv4eth11">
         <queue count="128" base="0x7980"/>
         <key>
 		    <fieldref name="ipv4.src"/>
@@ -109,8 +136,26 @@
 		    <fieldref name="ipv4.tos"/>
 	</key>
 	</distribution>
-	
-	<distribution name="ipv4eth9">
+
+	<distribution name="ipv4eth12">
+        <queue count="128" base="0x7a00"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.tos"/>
+	</key>
+	</distribution>
+
+	<distribution name="ipv4eth13">
+        <queue count="128" base="0x7a80"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.tos"/>
+	</key>
+	</distribution>
+
+	<distribution name="ipv4eth14">
         <queue count="128" base="0x7c00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
@@ -118,7 +163,16 @@
 		    <fieldref name="ipv4.tos"/>
 	</key>
 	</distribution>
-	
+
+	<distribution name="ipv4eth15">
+        <queue count="128" base="0x7c80"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.tos"/>
+	</key>
+	</distribution>
+
 	<distribution name="tcpeth0">
         <queue count="128" base="0x3800"/>
         <key>
@@ -129,7 +183,6 @@
 		    <fieldref name="tcp.dport"/>
 	</key>
 	</distribution>
-
 
 	<distribution name="tcpeth1">
         <queue count="128" base="0x3880"/>
@@ -166,7 +219,7 @@
 	</distribution>
 
 	<distribution name="tcpeth4">
-        <queue count="128" base="0x3c00"/>
+        <queue count="128" base="0x3a00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -177,7 +230,7 @@
 	</distribution>
 
 	<distribution name="tcpeth5">
-        <queue count="128" base="0x7800"/>
+        <queue count="128" base="0x3a80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -188,7 +241,7 @@
 	</distribution>
 
 	<distribution name="tcpeth6">
-        <queue count="128" base="0x7880"/>
+        <queue count="128" base="0x3c00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -199,7 +252,7 @@
 	</distribution>
 
 	<distribution name="tcpeth7">
-        <queue count="128" base="0x7900"/>
+        <queue count="128" base="0x3c80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -210,7 +263,7 @@
 	</distribution>
 
 	<distribution name="tcpeth8">
-        <queue count="128" base="0x7980"/>
+        <queue count="128" base="0x7800"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -221,7 +274,73 @@
 	</distribution>
 
 	<distribution name="tcpeth9">
+        <queue count="128" base="0x7880"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="tcp.sport"/>
+		    <fieldref name="tcp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="tcpeth10">
+        <queue count="128" base="0x7900"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="tcp.sport"/>
+		    <fieldref name="tcp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="tcpeth11">
+        <queue count="128" base="0x7980"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="tcp.sport"/>
+		    <fieldref name="tcp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="tcpeth12">
+        <queue count="128" base="0x7a00"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="tcp.sport"/>
+		    <fieldref name="tcp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="tcpeth13">
+        <queue count="128" base="0x7a80"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="tcp.sport"/>
+		    <fieldref name="tcp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="tcpeth14">
         <queue count="128" base="0x7c00"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="tcp.sport"/>
+		    <fieldref name="tcp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="tcpeth15">
+        <queue count="128" base="0x7c80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -277,7 +396,7 @@
 	</distribution>
 
 	<distribution name="udpeth4">
-        <queue count="128" base="0x3c00"/>
+        <queue count="128" base="0x3a00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -288,7 +407,7 @@
 	</distribution>
 
 	<distribution name="udpeth5">
-        <queue count="128" base="0x7800"/>
+        <queue count="128" base="0x3a80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -299,7 +418,7 @@
 	</distribution>
 
 	<distribution name="udpeth6">
-        <queue count="128" base="0x7880"/>
+        <queue count="128" base="0x3c00"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -310,7 +429,7 @@
 	</distribution>
 
 	<distribution name="udpeth7">
-        <queue count="128" base="0x7900"/>
+        <queue count="128" base="0x3c80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -321,7 +440,7 @@
 	</distribution>
 
 	<distribution name="udpeth8">
-        <queue count="128" base="0x7980"/>
+        <queue count="128" base="0x7800"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -332,7 +451,73 @@
 	</distribution>
 
 	<distribution name="udpeth9">
+        <queue count="128" base="0x7880"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="udp.sport"/>
+		    <fieldref name="udp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="udpeth10">
+        <queue count="128" base="0x7900"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="udp.sport"/>
+		    <fieldref name="udp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="udpeth11">
+        <queue count="128" base="0x7980"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="udp.sport"/>
+		    <fieldref name="udp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="udpeth12">
+        <queue count="128" base="0x7a00"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="udp.sport"/>
+		    <fieldref name="udp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="udpeth13">
+        <queue count="128" base="0x7a80"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="udp.sport"/>
+		    <fieldref name="udp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="udpeth14">
         <queue count="128" base="0x7c00"/>
+        <key>
+		    <fieldref name="ipv4.src"/>
+		    <fieldref name="ipv4.dst"/>
+		    <fieldref name="ipv4.nextp"/>
+		    <fieldref name="udp.sport"/>
+		    <fieldref name="udp.dport"/>
+	</key>
+	</distribution>
+
+	<distribution name="udpeth15">
+        <queue count="128" base="0x7c80"/>
         <key>
 		    <fieldref name="ipv4.src"/>
 		    <fieldref name="ipv4.dst"/>
@@ -359,27 +544,51 @@
         </distribution>
 
 	<distribution name="garbage_dist_4">
-        <queue count="1" base="0x3c00"/>
+        <queue count="1" base="0x3a00"/>
         </distribution>
 
 	<distribution name="garbage_dist_5">
-        <queue count="1" base="0x7800"/>
+        <queue count="1" base="0x3a80"/>
         </distribution>
 
 	<distribution name="garbage_dist_6">
-        <queue count="1" base="0x7880"/>
+        <queue count="1" base="0x3c00"/>
         </distribution>
 
 	<distribution name="garbage_dist_7">
-        <queue count="1" base="0x7900"/>
+        <queue count="1" base="0x3c80"/>
         </distribution>
 
 	<distribution name="garbage_dist_8">
-        <queue count="1" base="0x7980"/>
+        <queue count="1" base="0x7800"/>
         </distribution>
 
 	<distribution name="garbage_dist_9">
+        <queue count="1" base="0x7880"/>
+        </distribution>
+
+	<distribution name="garbage_dist_10">
+        <queue count="1" base="0x7900"/>
+        </distribution>
+
+	<distribution name="garbage_dist_11">
+        <queue count="1" base="0x7980"/>
+        </distribution>
+
+	<distribution name="garbage_dist_12">
+        <queue count="1" base="0x7a00"/>
+        </distribution>
+
+	<distribution name="garbage_dist_13">
+        <queue count="1" base="0x7a80"/>
+        </distribution>
+
+	<distribution name="garbage_dist_14">
         <queue count="1" base="0x7c00"/>
+        </distribution>
+
+	<distribution name="garbage_dist_15">
+        <queue count="1" base="0x7c80"/>
         </distribution>
 
 
@@ -473,5 +682,58 @@
         </dist_order>
 	</policy>
 
+	<policy name="linux_fman_tester_policy_10">
+        <dist_order>
+            <distributionref name="udpeth10"/>
+            <distributionref name="tcpeth10"/>
+            <distributionref name="ipv4eth10"/>
+            <distributionref name="garbage_dist_10"/>
+        </dist_order>
+	</policy>
+
+	<policy name="linux_fman_tester_policy_11">
+        <dist_order>
+            <distributionref name="udpeth11"/>
+            <distributionref name="tcpeth11"/>
+            <distributionref name="ipv4eth11"/>
+            <distributionref name="garbage_dist_11"/>
+        </dist_order>
+	</policy>
+
+	<policy name="linux_fman_tester_policy_12">
+        <dist_order>
+            <distributionref name="udpeth12"/>
+            <distributionref name="tcpeth12"/>
+            <distributionref name="ipv4eth12"/>
+            <distributionref name="garbage_dist_12"/>
+        </dist_order>
+	</policy>
+
+	<policy name="linux_fman_tester_policy_13">
+        <dist_order>
+            <distributionref name="udpeth13"/>
+            <distributionref name="tcpeth13"/>
+            <distributionref name="ipv4eth13"/>
+            <distributionref name="garbage_dist_13"/>
+        </dist_order>
+	</policy>
+
+	<policy name="linux_fman_tester_policy_14">
+        <dist_order>
+            <distributionref name="udpeth14"/>
+            <distributionref name="tcpeth14"/>
+            <distributionref name="ipv4eth14"/>
+            <distributionref name="garbage_dist_14"/>
+        </dist_order>
+	</policy>
+
+	<policy name="linux_fman_tester_policy_15">
+        <dist_order>
+            <distributionref name="udpeth15"/>
+            <distributionref name="tcpeth15"/>
+            <distributionref name="ipv4eth15"/>
+            <distributionref name="garbage_dist_15"/>
+        </dist_order>
+	</policy>
 
 </netpcd>
