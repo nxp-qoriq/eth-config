@@ -1,0 +1,8 @@
+<cfgdata>
+    <config>
+            <engine name="fm0">
+                        <port type="10G" number="0" policy="linux_fman_tester_policy_6"/>
+                        <port type="10G" number="1" policy="linux_fman_tester_policy_7"/>
+            </engine>
+    </config>
+</cfgdata>
