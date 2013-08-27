@@ -26,7 +26,7 @@
 <cfgdata>
     <config>
         <engine name="fm0">
-            <port type="10G" number="0" policy="linux_fman_tester_policy_4"/>
+            <port type="10G" number="0" policy="linux_fman_tester_policy_6"/>
         </engine>
     </config>
 </cfgdata>
